@@ -2,7 +2,7 @@
 
 ## A simple application for meetups
 
-## Deployed with [Vercel]()
+## Deployed with [Vercel](https://nextjs-meetups-tau.vercel.app/)
 
 ## Implements
 
