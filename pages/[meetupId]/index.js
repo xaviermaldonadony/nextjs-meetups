@@ -46,7 +46,15 @@ export async function getStaticPaths() {
 		// anything else 404
 		// true, try to render a page for this id dynamically
 		// on the server for the incoming req
-		fallback: false,
+		// blocking or true, the list of paths might not be exhaustive
+		// no 404 would be rendered, it would generate that page on demand
+		// then cached it, generates it on need it
+		// true will immediately would return an empty page
+		// then pull the dynamic generated content
+		// so we would have to handle that case that the page doesn't have
+		// the data yet, with blocking the user won't see anything till the
+		// finished paged generated and served
+		fallback: 'blocking',
 		paths: meetups,
 
 		// paths:[
